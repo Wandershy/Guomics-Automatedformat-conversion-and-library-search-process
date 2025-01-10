@@ -1,6 +1,6 @@
 """
 Author: Shuaiyao WANG
-Date: 2023-12-04
+Date: 2024-12-08
 Description: This script is for automatedformat conversion and library search process (Fragpipe and Sage)
 """
 import os
