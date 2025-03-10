@@ -434,7 +434,7 @@ def run_Sage(speciesPath_dir, mem_G):
         if os.listdir(os.path.join(speciesPath_dir, '00.rawdata.Sage.2nd')):
             raw_count = len([f for f in os.listdir(os.path.join(speciesPath_dir, '00.rawdata.Sage.2nd')) if f.endswith(".mzML")])
             raw_dir = '00.rawdata.Sage.2nd'
-            Sage(speciesPath_dir, raw_dir, raw_count)
+            Sage(speciesPath_dir, raw_dir, raw_count, mem_G)
             # submit Slurm and acquire Job ID
             result = subprocess.run(["sbatch", os.path.join(speciesPath_dir, "01.Sage.rerun.sh")], capture_output=True, text=True)
             output = result.stdout.strip()
@@ -466,7 +466,7 @@ def run_Sage(speciesPath_dir, mem_G):
             if os.listdir(os.path.join(speciesPath_dir, '00.rawdata.Sage.3rd')):
                 raw_count = len([f for f in os.listdir(os.path.join(speciesPath_dir, '00.rawdata.Sage.3rd')) if f.endswith(".mzML")])
                 raw_dir = '00.rawdata.Sage.3rd'
-                Sage(speciesPath_dir, raw_dir, raw_count)
+                Sage(speciesPath_dir, raw_dir, raw_count, mem_G)
                 # submit Slurm and acquire Job ID
                 result = subprocess.run(["sbatch", os.path.join(speciesPath_dir, "01.Sage.rerun.sh")], capture_output=True, text=True)
                 output = result.stdout.strip()
