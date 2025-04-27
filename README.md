@@ -21,7 +21,7 @@ conda install -c bioconda -c conda-forge sage-proteomics
 ### Run AutoSearch
 
 ```
-python3 AutoSearch_final_WangSY20241208.py -p /storage/guotiannanLab/xingziyuan/01.metaMS-GPT/00.training_dataset/01.single.species/00.bacteria/00.test/ -i species.txt -t raw
+python3 AutoSearch_final_WangSY.py -p /storage/guotiannanLab/xingziyuan/01.metaMS-GPT/00.training_dataset/01.single.species/00.bacteria/00.test/ -i species.txt -t raw
 ```
 
 - -p pathway of your species files
